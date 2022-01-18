@@ -37,15 +37,15 @@
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <Button Click="Button_Click">
-                    <Image Source="Data/Bold.png" Height="50" Width="50" />
+                    <Image Source="Images/Bold.png" Height="50" Width="50" />
                 </Button>
                 <Separator/>
                 <Button Click="Button_Click_1">
-                    <Image Source="Data/Italic.png" Height="50" Width="50" />
+                    <Image Source="Images/Italic.png" Height="50" Width="50" />
                 </Button>
                 <Separator/>
                 <Button Click="Button_Click_2">
-                    <Image Source="Data/Underline.png" Height="50" Width="50" />
+                    <Image Source="Images/Underline.png" Height="50" Width="50" />
                 </Button>
                 <Separator/>
             </ToolBar>
