@@ -120,5 +120,28 @@ namespace WpfApp5
         {
             Application.Current.Shutdown();
         }
+        private void ExitExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+        private void OpenExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                textBox.Text = File.ReadAllText(openFileDialog.FileName);
+            }
+        }
+
+        private void SaveExecuted(object sender, ExecutedRoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+            if (saveFileDialog.ShowDialog() == true)
+            {
+                File.WriteAllText(saveFileDialog.FileName, textBox.Text);
+            }
+        }
     }
 }
